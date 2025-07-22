@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NON PHY v5 — Bluebook</title>
-  <meta name="description" content="What no one is seeing? Non Phy v5. A structured manuscript, registered and awaiting release." />
-
+  <title>NON PHY - Emergent Physics</title>
+  <meta name="description" content="What remains unseen? Non Phy v5. A structured manuscript, registered and awaiting release." />
   <link rel="icon" href="/koppa-favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -22,25 +21,28 @@
     .btn-subscribe:hover {
       background-color: rgba(255,255,255,0.9);
     }
+    table.bordered-table th,
+    table.bordered-table td {
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.5rem 0.75rem;
+    }
   </style>
 </head>
 <body class="bg-custom-blue text-white min-h-screen flex flex-col">
-  <div class="container mx-auto px-4 py-12 md:py-20 max-w-3xl flex-grow">
+  <div class="container mx-auto px-4 py-12 md:py-20 max-w-4xl flex-grow">
     <!-- Header -->
     <header class="text-center mb-16">
       <div class="flex items-center justify-center gap-4">
-        <img src="https://nonphy.org/nonphy-koppa.svg" alt="Ϙ" class="w-12 h-12 md:w-16 md:h-16 rounded shadow-md" />
-        <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-2">NON PHY v5 — Bluebook</h1>
+        <!-- <img src="https://nonphy.org/nonphy-koppa.svg" alt="Ϙ" class="w-12 h-12 md:w-16 md:h-16 rounded shadow-md" /> -->
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-2">NON PHY</h1>
       </div>
       <h2 class="text-xl md:text-2xl font-light opacity-80 mb-6">Ontological and Emergent Physics</h2>
-      <p class="text-lg italic opacity-70">"What is no one seeing? Non fatum."</p>
     </header>
-
 
     <main class="space-y-12">
       <!-- The Bluebook Section -->
       <section class="section-divider pt-8">
-        <h3 class="text-2xl font-medium mb-4">The Bluebook</h3>
+        <h3 class="text-2xl font-medium mb-4">Download Material	</h3>
         <p class="opacity-90 leading-relaxed mb-4">
           Volume 1 has been officially registered, but its content remains private.
         </p>
@@ -73,34 +75,92 @@
         </form>
       </section>
 
-      <!-- Method Section -->
-      <section class="section-divider pt-8">
-        <h3 class="text-2xl font-medium mb-4">Method</h3>
-        <p class="opacity-90 leading-relaxed">
-          Each idea is published with the discipline of Karl Popper: it is structured, testable, and must pass the test.
-        </p>
-      </section>
+      <!-- Two Columns: Method/About and News Log -->
+      <section class="section-divider pt-12">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-medium mb-4">Method</h3>
+            <p class="opacity-90 leading-relaxed">
+              Each idea is published with the discipline of Karl Popper: it is structured, testable, and must pass the test.
+            </p>
 
-      <!-- About the Author -->
-      <section class="section-divider pt-8">
-        <h3 class="text-2xl font-medium mb-4">About the Author</h3>
-        <p class="opacity-90 leading-relaxed mb-8">
-          Roberto Bertó is the independent author of the Non Phy v5 framework. His work integrates physics, epistemology, and symbolic coherence, developed through personal study and analysis over decades.
-        </p>
-
-        <div class="space-y-3 text-lg opacity-90">
-          <div>ORCID: <a href="https://orcid.org/0009-0005-8283-2760" class="hover:underline" target="_blank">0009-0005-8283-2760</a></div>
-          <div>Contact: <a href="mailto:info@nonphy.org" class="hover:underline">info@nonphy.org</a></div>
+            <h3 class="text-2xl font-medium mt-8 mb-4">About the Author</h3>
+            <p class="opacity-90 leading-relaxed">
+              Roberto Bertó is the independent author of the Non Phy v5 framework. His work integrates physics, epistemology, and symbolic coherence, developed through personal study and analysis over decades.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-medium mb-4">News Log</h3>
+            <ul class="list-disc list-inside space-y-2 opacity-90 text-sm">
+              <li><strong>2025-07-22 15:28 UTC</strong><br>Falsifiability Table has been added to the website</li>
+              <li><strong>2025-07-22 14:00 UTC</strong><br>75 falsifiability tests completed across 5 foundational theories</li>
+              <li><strong>2025-07-22 12:30 UTC</strong><br>Website launched at nonphy.org</li>
+              <li><strong>2025-07-22 10:34 UTC</strong><br>Bluebook registered at DOI: <a href="https://doi.org/10.5281/zenodo.16312528">10.5281/zenodo.16312528</a></li>
+            </ul>
+          </div>
         </div>
       </section>
+
+      <!-- Falseability Table -->
+      <!-- Falseability Table -->
+      <section class="section-divider pt-12">
+        <h3 class="text-2xl font-medium mb-4">Karl Popper Falseability Methodology</h3>
+        <p class="mb-2 text-sm opacity-80">
+          ✅ <strong>Passed</strong> &middot; Tests: 5 &middot; Passed: 5 &middot; Failed: 0
+        </p>
+        <table class="w-full text-left text-sm bordered-table">
+          <thead class="bg-white bg-opacity-10 text-white">
+            <tr>
+              <th>Theory #</th>
+              <th>Equations #</th>
+              <th>Description</th>
+              <th>Falseability #</th>
+              <th>Passed</th>
+              <th>Failed</th>
+              <th>Status</th>
+              <th>Logs</th>
+            </tr>
+          </thead>
+          <tbody class="opacity-90">
+            <tr>
+              <td>THEO001</td><td>EQUA001</td><td>Pending publication</td><td>FATE001–015</td>
+              <td>15</td><td>0</td><td>✅ Passed</td>
+              <td><button onclick="alert('Log will be available upon theory publication.')" class="px-3 py-1 bg-white bg-opacity-20 rounded hover:bg-opacity-40">View log</button></td>
+            </tr>
+            <tr>
+              <td>THEO002</td><td>EQUA002</td><td>Pending publication</td><td>FATE016–030</td>
+              <td>15</td><td>0</td><td>✅ Passed</td>
+              <td><button onclick="alert('Log will be available upon theory publication.')" class="px-3 py-1 bg-white bg-opacity-20 rounded hover:bg-opacity-40">View log</button></td>
+            </tr>
+            <tr>
+              <td>THEO003</td><td>EQUA003</td><td>Pending publication</td><td>FATE031–045</td>
+              <td>15</td><td>0</td><td>✅ Passed</td>
+              <td><button onclick="alert('Log will be available upon theory publication.')" class="px-3 py-1 bg-white bg-opacity-20 rounded hover:bg-opacity-40">View log</button></td>
+            </tr>
+            <tr>
+              <td>THEO004</td><td>EQUA004</td><td>Pending publication</td><td>FATE046–060</td>
+              <td>15</td><td>0</td><td>✅ Passed</td>
+              <td><button onclick="alert('Log will be available upon theory publication.')" class="px-3 py-1 bg-white bg-opacity-20 rounded hover:bg-opacity-40">View log</button></td>
+            </tr>
+            <tr>
+              <td>THEO005</td><td>EQUA005</td><td>Pending publication</td><td>FATE061–075</td>
+              <td>15</td><td>0</td><td>✅ Passed</td>
+              <td><button onclick="alert('Log will be available upon theory publication.')" class="px-3 py-1 bg-white bg-opacity-20 rounded hover:bg-opacity-40">View log</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
     </main>
   </div>
 
-  <footer class="bg-black bg-opacity-20 py-4">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <div class="text-center text-sm opacity-70">
-        License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="hover:underline" target="_blank">CC BY-NC-ND 4.0</a>
-      </div>
+  <footer class="bg-black bg-opacity-20 py-6 mt-12">
+    <div class="container mx-auto px-4 max-w-4xl text-center text-sm opacity-80 space-y-2">
+      <p class="italic">What remains unseen? <strong>Non fatum.</strong></p>
+      <p>ORCID: <a href="https://orcid.org/0009-0005-8283-2760" class="hover:underline" target="_blank">0009-0005-8283-2760</a></p>
+      <p>Contact: <a href="mailto:info@nonphy.org" class="hover:underline">info@nonphy.org</a></p>
+      <p>GitHub: <a href="https://github.com/nonphyresearch/nonphy-site" class="hover:underline" target="_blank">GitHub site source</a></p>
+      <p>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="hover:underline" target="_blank">CC BY-NC-ND 4.0</a></p>
     </div>
   </footer>
 </body>
