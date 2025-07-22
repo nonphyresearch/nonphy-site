@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NON PHY v5 — Bluebook</title>
+  <link rel="icon" href="/koppa-favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .bg-custom-blue {
+      background-color: #2c74c6;
+    }
+    .section-divider {
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-subscribe:hover {
+      background-color: rgba(255,255,255,0.9);
+    }
+  </style>
+</head>
+<body class="bg-custom-blue text-white min-h-screen flex flex-col">
+  <div class="container mx-auto px-4 py-12 md:py-20 max-w-3xl flex-grow">
+    <!-- Header -->
+    <header class="text-center mb-16">
+      <div class="flex items-center justify-center gap-4">
+        <img src="/nonphy-koppa.svg" alt="Ϙ" class="w-12 h-12 md:w-16 md:h-16" />
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-2">NON PHY v5 — Bluebook</h1>
+      </div>
+      <h2 class="text-xl md:text-2xl font-light opacity-80 mb-6">Ontological and Emergent Physics</h2>
+      <p class="text-lg italic opacity-70">"What is no one seeing? Non fatum."</p>
+    </header>
+
+    <main class="space-y-12">
+      <!-- The Bluebook Section -->
+      <section class="section-divider pt-8">
+        <h3 class="text-2xl font-medium mb-4">The Bluebook</h3>
+        <p class="opacity-90 leading-relaxed mb-4">
+          Volume 1 has been officially registered, but its content remains private.
+        </p>
+        <div class="bg-white bg-opacity-10 p-4 rounded inline-block">
+          <a href="https://doi.org/10.5281/zenodo.16312528" class="text-white hover:underline break-all" target="_blank">
+            https://doi.org/10.5281/zenodo.16312528
+          </a>
+        </div>
+      </section>
+
+      <!-- Notification Form -->
+      <section class="section-divider pt-8">
+        <h3 class="text-2xl font-medium mb-4">Be notified when the Bluebook becomes public</h3>
+        <form action="https://buttondown.email/api/emails/embed-subscribe/nonphy" method="post" target="_blank" class="buttondown-form">
+          <div class="flex flex-col md:flex-row gap-2 max-w-lg">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your email address" 
+              class="flex-grow px-4 py-3 rounded bg-white bg-opacity-20 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              required
+            >
+            <button 
+              type="submit" 
+              class="btn-subscribe px-6 py-3 bg-white bg-opacity-80 text-blue-900 font-medium rounded transition duration-200"
+            >
+              Receive publication alert
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Method Section -->
+      <section class="section-divider pt-8">
+        <h3 class="text-2xl font-medium mb-4">Method</h3>
+        <p class="opacity-90 leading-relaxed">
+          Each idea is published with the discipline of Karl Popper: it is structured, testable, and must pass the test.
+        </p>
+      </section>
+
+      <!-- About the Author -->
+      <section class="section-divider pt-8">
+        <h3 class="text-2xl font-medium mb-4">About the Author</h3>
+        <p class="opacity-90 leading-relaxed mb-8">
+          Roberto Bertó is the independent author of the Non Phy v5 framework. His work integrates physics, epistemology, and symbolic coherence, developed through personal study and analysis over decades.
+        </p>
+
+        <div class="space-y-3 text-lg opacity-90">
+          <div>ORCID: <a href="https://orcid.org/0009-0005-8283-2760" class="hover:underline" target="_blank">0009-0005-8283-2760</a></div>
+          <div>Contact: <a href="mailto:info@nonphy.org" class="hover:underline">info@nonphy.org</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="bg-black bg-opacity-20 py-4">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="text-center text-sm opacity-70">
+        License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="hover:underline" target="_blank">CC BY-NC-ND 4.0</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
