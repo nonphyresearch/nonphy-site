@@ -173,29 +173,56 @@
     </main>
   </div>
 
-  
   <footer class="bg-black bg-opacity-20 py-6 mt-12">
-    <div class="container mx-auto px-4 max-w-4xl text-center text-sm opacity-80 space-y-2">
-      <p class="italic">What remains unseen? <strong>Non Fatum.</strong></p>
-      <p>ORCID: <a href="https://orcid.org/0009-0005-8283-2760" class="hover:underline" target="_blank">0009-0005-8283-2760</a></p>
-      <p>Contact: <a href="mailto:info@nonphy.org" class="hover:underline">info@nonphy.org</a></p>
-      <p>GitHub: <a href="https://github.com/nonphyresearch/nonphy-site" class="hover:underline" target="_blank">GitHub site source</a></p>
-      <p>License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="hover:underline" target="_blank">CC BY-NC-ND 4.0</a></p>
+  <div class="container mx-auto px-4 max-w-4xl text-center text-sm opacity-80 space-y-2">
+    <p class="italic">What remains unseen? <strong>Non Fatum.</strong></p>
+    <p>
+      Contact: <a href="mailto:info@nonphy.org" class="hover:underline">info@nonphy.org</a>
+    </p>
 
-      <!-- 📊 Public stats button -->
-      <div class="pt-4">
-        <a 
-          href="https://plausible.io/nonphy.org" 
-          target="_blank" 
-          class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded bg-white bg-opacity-10 hover:bg-opacity-20 transition"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-80" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3 13h2v-2H3v2zm4 6h2v-8H7v8zm4-4h2V5h-2v10zm4 6h2V9h-2v12zm4-8h2V3h-2v10z"/>
-          </svg>
-          <span>View Public Stats</span>
+    <!-- 📊 Public stats button -->
+    <div class="pt-2">
+      <a 
+        href="https://plausible.io/nonphy.org" 
+        target="_blank" 
+        class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded bg-white bg-opacity-10 hover:bg-opacity-20 transition"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-80" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 13h2v-2H3v2zm4 6h2v-8H7v8zm4-4h2V5h-2v10zm4 6h2V9h-2v12zm4-8h2V3h-2v10z"/>
+        </svg>
+        <span>View Public Stats</span>
+      </a>
+    </div>
+
+    <!-- Badges com grid em linhas -->
+    <div class="grid gap-y-2 mt-6 text-sm">
+      <!-- Linha 1: Estrutura -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <a href="https://doi.org/10.5281/zenodo.16312528" target="_blank">
+          <img src="https://img.shields.io/badge/DOI-10.5281/zenodo.16312528-blue?style=flat-square&logo=datacite" alt="DOI Badge">
+        </a>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+          <img src="https://img.shields.io/badge/License-CC--BY--NC--ND_4.0-lightgrey?style=flat-square&logo=creativecommons" alt="License Badge">
+        </a>
+        <img src="https://img.shields.io/badge/v5-Bluebook-blueviolet?style=flat-square" alt="Version: v5 Bluebook">
+      </div>
+
+      <!-- Linha 2: Identidade -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <a href="https://orcid.org/0009-0005-8283-2760" target="_blank">
+          <img src="https://img.shields.io/badge/ORCID-0009--0005--8283--2760-a6ce39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID Badge">
         </a>
       </div>
+
+      <!-- Linha 3: Repositório -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <a href="https://github.com/nonphyresearch/nonphy-site" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-nonphy--site-black?style=flat-square&logo=github" alt="GitHub Repo">
+        </a>
+        <img src="https://img.shields.io/badge/Last_Update-2025--07--24-green?style=flat-square" alt="Last Updated Badge">
+      </div>
     </div>
+  </div>
   </footer>
 
 
