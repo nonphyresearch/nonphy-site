@@ -42,6 +42,34 @@
       padding: 0.5rem 0.75rem;
     }
   </style>
+  <script>
+  fetch("https://data.nonphy.org/github/nonphyresearch-nonphy-site.json")
+    .then(res => res.json())
+    .then(data => {
+      const lastPush = data?.profile?.last_push ?? "unknown";
+      const clones = data?.clones?.total ?? 0;
+      const views = data?.views?.total ?? 0;
+
+      const format = (str) => encodeURIComponent(str.replaceAll("-", "--"));
+
+      const badge = (id, label, value, color) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.src = `https://img.shields.io/badge/${label}-${format(value.toString())}-${color}?style=flat-square`;
+          el.title = `${label.replace("_", " ")}: ${value}`;
+        }
+      };
+
+      badge("badge-last-update", "Last_Update", lastPush, "green");
+      badge("badge-github-clones", "Clones", clones, "blue");
+      badge("badge-github-views", "Views", views, "orange");
+    })
+    .catch(err => {
+      console.warn("Failed to load GitHub stats:", err);
+    });
+  </script>
+
+
 </head>
 <body class="bg-custom-blue text-white min-h-screen flex flex-col">
   <div class="container mx-auto px-4 py-12 md:py-20 max-w-4xl flex-grow">
@@ -214,13 +242,24 @@
         </a>
       </div>
 
-      <!-- Linha 3: Repositório -->
       <div class="flex flex-wrap justify-center gap-2">
         <a href="https://github.com/nonphyresearch/nonphy-site" target="_blank">
           <img src="https://img.shields.io/badge/GitHub-nonphy--site-black?style=flat-square&logo=github" alt="GitHub Repo">
         </a>
-        <img src="https://img.shields.io/badge/Last_Update-2025--07--24-green?style=flat-square" alt="Last Updated Badge">
+
+        <img id="badge-last-update" src="https://img.shields.io/badge/Last_Update-loading-lightgrey?style=flat-square" alt="Last Update Badge" title="Waiting GitHub data">
+
+        <a href="https://plausible.io/nonphy.org" target="_blank">
+          <img id="badge-github-clones" src="https://img.shields.io/badge/Clones-0-lightgrey?style=flat-square" alt="GitHub Clones Badge" title="Waiting GitHub data">
+        </a>
+
+        <a href="https://plausible.io/nonphy.org" target="_blank">
+          <img id="badge-github-views" src="https://img.shields.io/badge/Views-0-lightgrey?style=flat-square" alt="GitHub Views Badge" title="Waiting GitHub data">
+        </a>
       </div>
+
+
+
     </div>
   </div>
   </footer>
