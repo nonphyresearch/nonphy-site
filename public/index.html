@@ -47,8 +47,6 @@
     .then(res => res.json())
     .then(data => {
       const lastPush = data?.profile?.last_push ?? "unknown";
-      const clones = data?.clones?.total ?? 0;
-      const views = data?.views?.total ?? 0;
 
       const format = (str) => encodeURIComponent(str.replaceAll("-", "--"));
 
@@ -61,8 +59,6 @@
       };
 
       badge("badge-last-update", "Last_Update", lastPush, "green");
-      badge("badge-github-clones", "Clones", clones, "blue");
-      badge("badge-github-views", "Views", views, "orange");
     })
     .catch(err => {
       console.warn("Failed to load GitHub stats:", err);
@@ -249,13 +245,6 @@
 
         <img id="badge-last-update" src="https://img.shields.io/badge/Last_Update-loading-lightgrey?style=flat-square" alt="Last Update Badge" title="Waiting GitHub data">
 
-        <a href="https://plausible.io/nonphy.org" target="_blank">
-          <img id="badge-github-clones" src="https://img.shields.io/badge/Clones-0-lightgrey?style=flat-square" alt="GitHub Clones Badge" title="Waiting GitHub data">
-        </a>
-
-        <a href="https://plausible.io/nonphy.org" target="_blank">
-          <img id="badge-github-views" src="https://img.shields.io/badge/Views-0-lightgrey?style=flat-square" alt="GitHub Views Badge" title="Waiting GitHub data">
-        </a>
       </div>
 
 
